@@ -1,0 +1,168 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+/* Masthead Section */
+.masthead {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 50px 0;
+    position: relative;
+}
+
+.masthead h1 {
+    font-size: 2.5rem;
+}
+
+.arrow {
+    font-size: 2rem;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+
+/* Hover effect for arrow */
+.arrow:hover {
+    color: #ff6347;
+}
+
+/* Angled Section */
+.angled-section {
+    background-color: #fff;
+    padding: 40px;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+}
+
+/* Image Row */
+.image-row {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.image-container {
+    position: relative;
+    width: 300px;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.2rem;
+    border-radius: 10px;
+}
+
+/* Hover effect for images */
+.image-container:hover .overlay {
+    display: flex;
+}
+
+/* Contact CTA Button */
+.contact-btn {
+    display: inline-flex;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    cursor: pointer;
+}
+
+.contact-btn svg {
+    margin-right: 10px;
+}
+
+/* Hover effect for contact button */
+.contact-btn:hover {
+    background-color: #ff6347;
+}
+
+/* Popup Form */
+.popup-form {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.popup-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.popup-form input {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Video Section */
+.video-section {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.video-section video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Responsive design for mobile */
+@media (max-width: 768px) {
+    .masthead h1 {
+        font-size: 1.8rem;
+    }
+
+    .image-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-container {
+        width: 80%;
+    }
+
+    .contact-btn {
+        width: 100%;
+        padding: 12px;
+    }
+}
